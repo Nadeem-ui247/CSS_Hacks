@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0F172A; /* Deep Navy */
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(248, 250, 252, 0.05);
+  padding: 80px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(31, 216, 148, 0.6);
+  border: 1px solid rgba(248, 250, 252, 0.1);
+}
+
+.title {
+  color: #3B82F6; /* Electric Blue */
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.subtitle {
+  color: #F8FAFC;
+  margin-bottom: 25px;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.student {
+  background: #10B981; /* Emerald Green */
+  color: white;
+  /* text-align: center; */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  width: 400px;
+  height: 55px;
+}
+
+.student:hover {
+  background: #1a976f;
+  transform: scale(1.05);
+  
+}
+
+.admin {
+    display: flex;
+  background: #F59E0B; /* Amber */
+  color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  width: 400px;
+  height: 55px;
+}
+
+.admin:hover {
+  background: #D97706;
+  transform: scale(1.05);
+}
+a {
+  text-decoration: none;
+}
