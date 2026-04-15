@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Card */
+.container {
+    width: 400px;
+    margin: 100px auto;
+    background: #d1d5db;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Heading */
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    display: block;
+    margin-top: 24px;
+    color: #222;
+}
+
+
+/* Inputs */
+input {
+    width: 95%;
+    padding:  8px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    background: #e5e7eb;
+    border-radius: 10px;
+    height:20px;
+}
+
+/* Photo section */
+.photo-upload {
+    display: flex;
+    margin-top: 20px;
+}
+
+.photo-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #e5e7eb;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
+}
+
+.plus-btn {
+    width: 60px;
+    border: none;
+    background: #e5e7eb;
+    border-left: 1px solid #aaa;
+    border-radius: 0 8px 8px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+    .photo-upload:hover {
+    background-color: #434d5a; /* darker shade on hover */
+    transition: 0.3s;
+}
+
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 43px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #0f75d1;
+}
+/* Admin link */
+.admin-link {
+    color: red;
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+}
