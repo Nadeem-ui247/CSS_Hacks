@@ -94,14 +94,14 @@
                    a 15.9155 15.9155 0 0 1 0 -31.831" />
 
             <!-- Progress circle -->
-            <path class="circle"
+            <path id="circleProgress" class="circle"
                 stroke-dasharray="91.6, 100"
                 d="M18 2.0845
                    a 15.9155 15.9155 0 0 1 0 31.831
                    a 15.9155 15.9155 0 0 1 0 -31.831" />
 
             <!-- Percentage text -->
-            <text x="18" y="20.35" class="percentage">91.6%</text>
+            <text id="efficiencyText" x="18" y="18.6" class="percentage">0%</text>
         </svg>
         <p>Efficiency</p>
     </div>
@@ -113,6 +113,8 @@
     </div>
 
 </div>
+
+</script>
 
 </body>
 </html>
@@ -132,43 +134,94 @@
         <div class="step-container first-row">
             <div class="step">
                 <div class="step-box">Step 1</div>
-                <div class="card1"><div class="icon-box">👤</div><p>Sign up</p></div>
+                <div class="card1"><div class="icon-box"><img src="user.png" ></div><p>Sign up</p></div>
             </div>
-            <div class="connector">.................................</div>
-              
+            
             <div class="step">
                 <div class="step-box">Step 2</div>
-                <div class="card1"><div class="icon-box">🔧</div><p>Raise a complaint</p></div>
+                <div class="card1"><div class="icon-box"><img src="forward.png" alt=""></div><p>Raise a complaint</p></div>
             </div>
-            <div class="connector">.................................</div>
+            
             <div class="step">
                 <div class="step-box">Step 3</div>
-                <div class="card1"><div class="icon-box">📍</div><p>Check Live Status</p></div>
+                <div class="card1"><div class="icon-box"><img src="location.png" alt=""></div><p>Check Live Status</p></div>
             </div>
         </div>
 
         <div class="step-container second-row">
             <div class="step">
                 <div class="step-box">Step 4</div>
-                 <div class="card1"><div class="icon-box">✅</div><p>Get it Resolved</p></div>
+                 <div class="card1"><div class="icon-box"><img src="solutions.png" alt=""></div><p>Get it Resolved</p></div>
             </div>
-            <div class="connector">.................................</div>
+            
             <div class="step">
                 <div class="step-box">Step 5</div>
-                 <div class="card1"><div class="icon-box">↩️</div><p>Feedback</p></div>
+                 <div class="card1"><div class="icon-box"><img src="feedback.png" alt=""></div><p>Feedback</p></div>
             </div>
         </div>
     </div><br><br>
+<!-- Footer -->
+ <footer class="footer">
+  <div class="footer-top">
 
-    <footer class="footer">
-        <div>
-            <p>Any Issues:</p><br>
-            <p>Contact: 7010976847 </p>
-            <p>E-mail: campusresolve247@gmail.com </p>
-        </div>
-        <div class="footer-brand">CampusResolve</div>
-    </footer>
+    <!-- Left Section -->
+    <div class="footer-left">
+      <h2>CampusResolve</h2>
+      <div class="footer-info">
+  <img src="NITS.svg" class="footer-logo" alt="logo">
 
+  <div class="footer-text">
+    <p>National Institute of Technology Silchar,</p>
+    <p>Cachar, Assam, India</p>
+    <p>Tel : +91 3842-224-797</p>
+    <p>Email: director@nits.ac.in</p>
+  </div>
+  <div class="footer-right">
+    <h3>For queries, contact</h3>
+    <p>+91 7896637401</p>
+    <p>+91 7099683180</p>
+    <p>+91 7010976847</p>
+    <p>+91 9004230955</p>
+  </div>
+</div>
+      
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+   <div class="line">
+
+   </div>
+  <div class="footer-bottom">
+    <p>© 2026 CampusResolve</p>
+    <p>All rights reserved | Designed & Developed by WebWizards</p>
+  </div>
+  <div class="spacing">
+    
+  </div>
+</footer>
+<script>
+function updateEfficiency() {
+  const total = Number(document.getElementById("total").textContent.trim());
+  const resolved = Number(document.getElementById("resolved").textContent.trim());
+
+  console.log("Total:", total, "Resolved:", resolved);
+
+  if (!isNaN(total) && total > 0) {
+    let efficiency = (resolved / total) * 100;
+    efficiency = efficiency.toFixed(1);
+
+    document.getElementById("efficiencyText").textContent = efficiency + "%";
+
+    document.getElementById("circleProgress")
+      .setAttribute("stroke-dasharray", efficiency + ", 100");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", updateEfficiency);
+</script>
+</body>
 </body>
 </html>
 
